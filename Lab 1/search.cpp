@@ -1,6 +1,4 @@
-#include<stdio.h>
-
-//sortings
+//Linear Search and Binary Search
 #include<stdio.h>
 #include<cstdlib>
 #include "sorting.h"
