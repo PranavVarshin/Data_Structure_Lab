@@ -3,8 +3,8 @@
 #include<cstdlib>
 #include "sorting.h"
 
-void LinearSearch(int a[],int n);
-void BinarySearch(int a[],int n);
+int LinearSearch(int a[],int n);
+int BinarySearch(int a[],int n);
 
 int main()
 {
@@ -87,7 +87,7 @@ case '6'://Exiting...
  return 0;
 }
 
-void LinearSearch(int a[],int n)
+int LinearSearch(int a[],int n)
 {
    int S,i,check;
    printf("Enter the number to be searched:");
@@ -97,16 +97,17 @@ void LinearSearch(int a[],int n)
       if(S==a[i])
       {
          printf("The index of the element %d is %d\n",S,i);
-         check=10;
+         return (i);
       }
    }
    if(check!=10)
    {
       printf("Element not found\n");
+      return(-1);
    }
 }
 
-void BinarySearch(int a[],int n)
+int BinarySearch(int a[],int n)
 {
    int S,min,max;
    min=0;
@@ -129,11 +130,12 @@ void BinarySearch(int a[],int n)
  if(a[(min+max)/2]==S)
  {
     printf("The index of the element %d is %d\n",S,(min+max)/2);
+    return((min+max)/2);
  }  
 
  else 
       {
          printf("Element not found\n");
-      
+         return(-1);
       }
 }
